@@ -13,7 +13,7 @@ const AddJobPage = ({ addJobSubmit }) => {
   const [contactEmail, setContactEmail] = useState('');
   const [contactPhone, setContactPhone] = useState('');
 
-  const navigate = useNagivate();
+  const navigate = useNavigate();
 
   const submitForm = (e) => {
     e.preventDefault();
@@ -30,10 +30,10 @@ const AddJobPage = ({ addJobSubmit }) => {
         contactEmail,
         contactPhone
       }
-    }
+    };
     addJobSubmit(newJob);
-    return navigate("/jobs");
-  }
+    return navigate('/jobs');
+  };
 
   return (
     <section className="bg-indigo-50">
